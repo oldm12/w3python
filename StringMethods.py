@@ -289,11 +289,13 @@ print(a.isspace())
 
 # String istitle() Method - Возвращает True, если строка соответствует правилам заголовка.
 print(color.GREEN + "String istitle() Method - Возвращает True, если строка соответствует правилам заголовка." + color.END)
+# example1
 txt = "Hello, And Welcome To My World!"
 print(color.BLUE + "Original: " + txt + color.END)
 x = txt.istitle()
 print(x)
 
+# example2
 a = "HELLO, AND WELCOME TO MY WORLD"
 b = "Hello"
 c = "22 Names"
@@ -310,15 +312,16 @@ print(d.istitle())
 
 # String isupper() Method - Возвращает значение True, если все символы в строке имеют верхний регистр.
 print(color.GREEN + "String isupper() Method - Возвращает значение True, если все символы в строке имеют верхний регистр." + color.END)
+# example1
 txt = "THIS IS NOW!"
 print(color.BLUE + "Original: " + txt + color.END)
 x = txt.isupper()
 print(x)
 
+# example2
 a = "Hello World!"
 b = "hello 123"
 c = "MY NAME IS PETER"
-
 print(color.BLUE + "Original: " + a + color.END)
 print(a.isupper())
 print(color.BLUE + "Original: " + b + color.END)
@@ -326,6 +329,152 @@ print(b.isupper())
 print(color.BLUE + "Original: " + c + color.END)
 print(c.isupper())
 
+# String join() Method - Присоединяет элементы итерации к концу строки
+print(color.GREEN + "String join() Method - Присоединяет элементы итерации к концу строки." + color.END)
+# example1
+myTuple = ("Apple", "Banana", "Orange")        #tuple - кортеж
+x = "#".join(myTuple)
+y = ", ".join(myTuple)
+print("Вставило символ '#': ", x)
+print("Вставило символ ', ': " + y)
+
+# example2
+myDict = {"name": "John", "country": "Norway"}
+mySeparator = " - "
+x = mySeparator.join(myDict)     # разделитель через переменную
+print(x)
+
+# String ljust() Method - Возвращает версию строки, выровненную по левому краю.
+print(color.GREEN + "String ljust() Method - Возвращает версию строки, выровненную по левому краю." + color.END)
+# example1
+txtLeft = "Banana"
+x = txtLeft.ljust(20)
+print(color.BLUE, color.BOLD + x + color.END, "is my favorite fruit.")
+
+# example2
+# string.ljust(length, character)
+txtLeftLetter = "banana"
+y = txtLeftLetter.ljust(10, "o") # Заполнить "о" до 10 символа в страке -> banana (6) + о (4) 
+print(y,"is my favorite fruit.")
+
+# String lower() Method Преобразует строку в нижний регистр
+print(color.GREEN + "String lower() Method Преобразует строку в нижний регистр." + color.END)
+txt = "Hello my FRIENDS"
+print(color.BLUE + "Original: " + txt + color.END)
+x = txt.lower()
+print(x)
+
+# String lstrip() Method - Возвращает версию строки с обрезкой слева
+print(color.GREEN + "String lstrip() Method - Возвращает версию строки с обрезкой слева." + color.END)
+# example1
+tex = "   banana"     # пробелы перед словом не выводит
+space = tex.lstrip()    # по умолчанию пробел уберет
+print("of all fruits", space, "is my favorite")
+
+# example2
+# string.lstrip(characters)
+test = ",,,,,ssaaww.....banana"
+x = test.lstrip(",.asw")
+print(color.BLUE + "Original: " + test + color.END)
+print(x)
+
+# String maketrans() Method - Возвращает таблицу перевода, которая будет использоваться в переводах.
+print(color.GREEN + "String maketrans() Method - Возвращает таблицу перевода, которая будет использоваться в переводах." + color.END)
+# example1
+test2 = "Hello Sam!"
+mytable = str.maketrans("S", "P")
+print(test2.translate(mytable))
+
+# example2
+"""
+?Возможно использовать в методе заменив букву на символ?
+Нужно знать буквы в масиве, чтобы вводить замену.
+"""
+test3 = "Banana"
+myTest3 = str.maketrans("a", "_")
+print(test3.translate(myTest3))
+
+# str.maketrans(x, y, z)
+# example3
+txt = "Hi Sam!"
+x = "mSa"      # Симетрия замещения из "х" значениями в "у" m=e, S=J, a=o
+y = "eJo"
+mytable = str.maketrans(x, y)
+print(color.BLUE + "Original: " + txt + color.END)
+print(txt.translate(mytable))
+
+# example4
+txt = "Good night Sam!"
+x = "mSa"
+y = "eJo"
+z = "odnght"      # Удаляет символы, что перечислены
+mytable = str.maketrans(x, y, z)
+print(color.BLUE + "Original: " + txt + color.END)
+print(txt.translate(mytable))    # will be "G i Joe!"
+
+# example5
+# Сам метод maketrans() возвращает словарь, описывающий каждую замену в Юникоде:
+# will be {109: 101, 83: 74, 97: 111, 111: None, 100: None, 110: None, 103: None, 104: None, 116: None}
+txt = "Good night Sam!"
+x = "mSa"
+y = "eJo"
+z = "odnght"      # Удаляет символы, что перечислены
+print(color.BLUE + "Original: " + txt + color.END)
+print(str.maketrans(x, y, z))
+
+# String partition() Method - Возвращает кортеж, в котором строка разделена на три части по заданному слову.
+print(color.GREEN + "String maketrans() Method - Возвращает таблицу перевода, которая будет использоваться в переводах." + color.END)
+# example1
+text = "I could eat bananas all day"
+x = text.partition("bananas")
+print(color.BLUE + "Original: " + text + color.END)
+print(x)
+
+# example2
+# string.partition(value)
+txt = "I could eat bananas all day"
+y = txt.partition("apple")
+print(color.BLUE + "Original: " + txt + color.END)
+print(y)
+
+# String replace() Method - Возвращает строку, в которой указанное значение заменяется указанным значением.
+print(color.GREEN + "String replace() Method - Возвращает строку, в которой указанное значение заменяется указанным значением." + color.END)
+# example1
+txt = "I like bananas"
+x = txt.replace("bananas", "apples")
+print(color.BLUE + "Original: " + txt + color.END)
+print(x)
+
+# string.replace(oldvalue, newvalue, count)
+# example2
+txt = "one one was a race horse, two two was one too."
+y = txt.replace("one", "three")     # replace all
+print(color.BLUE + "Original: " + txt + color.END)
+print(y)
+
+# example3
+z = txt.replace("one", "three", 1)        # replace "1"
+print(z)
+
+"""
+Еще осталось пройти:
+rfind()	         Searches the string for a specified value and returns the last position of where it was found
+rindex()	         Searches the string for a specified value and returns the last position of where it was found
+rjust()	         Returns a right justified version of the string
+rpartition()	   Returns a tuple where the string is parted into three parts
+rsplit()	         Splits the string at the specified separator, and returns a list
+rstrip()	         Returns a right trim version of the string
+split()	         Splits the string at the specified separator, and returns a list
+splitlines()	   Splits the string at line breaks and returns a list
+startswith()	   Returns true if the string starts with the specified value
+strip()	         Returns a trimmed version of the string
+swapcase()	      Swaps cases, lower case becomes upper case and vice versa
+title()	         Converts the first character of each word to upper case
+translate()	      Returns a translated string
+upper()	         Converts a string into upper case
+zfill()	         Fills the string with a specified number of 0 values at the beginning
+
+"""
 
 
 # print(g.replace("H", "J"))    # print will be simbol "Jello, World!"

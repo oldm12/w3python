@@ -77,7 +77,7 @@ da = complex(1j)                                        #complex
 ea = list(("apple", "banana", "cherry"))                #list - список
 fa = tuple(("berry", "blueberry", "raspberry"))         #tuple - кортеж
 ga = range(6)                                           #range - диапазон
-ia = dict(name="Anna", age=36)                  #dict
+ia = dict(name="Anna", age=36)                          #dict
 ja = set(("berry", "banana", "blueberry"))              #set
 ka = frozenset(("apple", "cherry", "berry"))            #frozenset
 la = bool(5)                                               #bool
