@@ -280,7 +280,6 @@ print("x = " + format(x) + "\n'pineapple' not in x?")
 print("pineapple" not in x)
 # returns True because a sequence with the value "pineapple" is not in the list
 
-
 # Bitwise Operators - сравнения (двоичных) чисел
 """
 & 	      AND	      Sets each bit to 1 if both bits are 1	               x & y	
@@ -290,3 +289,28 @@ print("pineapple" not in x)
 <<	      Zero fill left shift	   Shift left by pushing zeros in from the right and let the leftmost bits fall off	x << 2	
 >>	      Signed right shift	   Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off	x >> 2
 """
+
+# example8 - Operator Precedence - Круглые скобки имеют наивысший приоритет
+print(color.PURPLE+"example8 - Operator Precedence - Круглые скобки имеют наивысший приоритет" +color.END)
+print((6 + 4) - (6 + 3))
+print(color.BLUE + "Умножение * имеет более высокий приоритет, чем сложение +" + color.END)
+print(2 + 5 * 3)
+
+# Порядок приоритета описан в таблице ниже, начиная с самого высокого приоритета вверху:
+print(color.BLUE + "Порядок приоритета описан в таблице ниже, начиная с самого высокого приоритета вверху:" + color.END)
+"""
+()	                  Parentheses	
+**	                  Exponentiation	
++x  -x  ~x	         Unary plus, unary minus, and bitwise NOT	
+*  /  //  %	         Multiplication, division, floor division, and modulus	
++  -	               Addition and subtraction	
+<<  >>	            Bitwise left and right shifts	
+&	                  Bitwise AND	
+^	                  Bitwise XOR	
+|	                  Bitwise OR	
+==  !=  >  >=  <  <=  is  is not  in  not in 	Comparisons, identity, and membership operators	
+not	               Logical NOT	
+and	               AND	
+or	                  OR
+"""
+print(5 + 4 - 7 + 3)
